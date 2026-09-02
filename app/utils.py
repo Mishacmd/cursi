@@ -1,6 +1,8 @@
 def calculate_discount(price : float, discount : float) -> float:
-    new_price = round(price * (discount / 100), 2)
-    
+    try:
+        new_price = round(price * (discount / 100), 2)
+    except:
+        new_price = round(price, 2)
     return new_price
 
 def is_even(number : int) -> bool:
