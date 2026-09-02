@@ -1,6 +1,6 @@
-def calculate_discount(price : float, discount : float) -> float:
+def calculate_discount(price: float, discount: float) -> float:
     try:
-        new_price = round(price * (discount / 100), 2)
+        new_price = round(price * (1 - discount / 100), 2)
     except:
         new_price = round(price, 2)
     return new_price
