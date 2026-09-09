@@ -32,7 +32,4 @@ def is_password_strong(password: str) -> bool:
     if not any(char.isdigit() for char in password):
         return False
     
-    if not any(char in "!@#$%^&*()-_=+[]{}|;:'\",.<>?/`~" for char in password):
-        return False
-    
     return True
