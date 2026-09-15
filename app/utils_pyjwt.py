@@ -25,7 +25,7 @@ decode = jwt.decode(
     jwt=encode_jwt,
     key=JWT_SECRET,
     algorithms=['HS256'],
-    # options={'verify_signature': False}
+    
 )
 
 print(decode)
