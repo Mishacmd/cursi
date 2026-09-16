@@ -13,7 +13,6 @@ class ShoppingCart:
             self.items.append({ "item": item, "price": price, "quantity": quantity })
 
     def remove_item(self, item):
-        if item in self.items:
             self.items.remove(next(i for i in self.items if i["item"] == item))
 
     def get_total(self):
