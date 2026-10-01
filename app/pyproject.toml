@@ -8,10 +8,16 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
+    "boto3>=1.43.102",
+    "dotenv>=0.9.9",
     "passlib[bcrypt]>=1.7.4",
+    "pika>=1.4.4",
     "pillow>=12.3.0",
+    "psycopg2-binary>=2.9.13",
+    "pydotenv>=0.0.7",
     "pyjwt>=2.14.0",
     "pyotp>=2.10.0",
     "pytest>=9.1.1",
     "qrcode>=8.2",
+    "redis>=8.1.0",
 ]
