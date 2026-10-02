@@ -9,4 +9,8 @@ with psycopg2.connect(
     host=config.PGHOST,
     port=5432,
 ) as connection:
-    pass
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM users;")
+        rows = cursor.fetchall()
+        for row in rows:
+            print(row)
