@@ -10,7 +10,6 @@ s3client = boto3.client(
     aws_secret_access_key=config.AWS_SECRET_KEY,
 )
 
-# CREATE - upload file
 
 target_file_name = 'images/Misha_Nedogonov.html'
 s3client.upload_file("Misha_Nedogonov.html", config.AWS_BUCKET_NAME, target_file_name)
