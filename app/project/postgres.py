@@ -10,7 +10,11 @@ with psycopg2.connect(
     port=5432,
 ) as connection:
     with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM users;")
-        rows = cursor.fetchall()
-        for row in rows:
-            print(row)
+        query = """
+        CREATE TABLE IF NOT EXISTS brand (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(50) NOT NULL UNIQUE
+
+        );
+        """       
+        cursor.execute(query)
